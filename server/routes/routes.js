@@ -6,8 +6,8 @@ const userControllers = require('../controllers/userController');
 router.get('/menu', menuControllers.getAll);
 router.post('/menu', menuControllers.postOne);
 
-router.get('/user', userControllers.getAll);
-router.post('/user', userControllers.postOne);
+router.get('/register', userControllers.getAll);
+router.post('/register', userControllers.postOne);
 
 
 module.exports = router

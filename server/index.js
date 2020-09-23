@@ -9,8 +9,14 @@ const app = express();
 const port = 3001;
 const host = 'localhost';
 
+const corsConfig = {
+  origin: 'http://localhost:3000',
+  credentials: true,
+};
 
-app.use(cors());
+
+
+app.use(cors(corsConfig));
 app.use(express.json());
 app.use(router);
 

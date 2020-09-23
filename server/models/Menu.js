@@ -6,8 +6,6 @@ const Schema = mongoose.Schema;
 
 const MenuSchema = new Schema({
   restaurantName: { type: String, required: true },
-  // date: { type: String, required: true },
-  // venue: { type: String, required: true },
   published_at: { type: Number, default: Date.now() },
 });
 
