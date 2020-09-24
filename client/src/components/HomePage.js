@@ -3,24 +3,31 @@ import { useParams, NavLink } from 'react-router-dom';
 
 function HomePage () {
 
-  const {restaurantName} = useParams();
-  console.log( '----------> restaurantName:', restaurantName);
+  const {userName} = useParams();
+  console.log( '----------> restaurantName:', userName);
 
 
   return (
     <div>
-
-<div className="btn-group">
-          <NavLink to="/" className="btn" activeClassName="active">
-            Logout
-          </NavLink>
-          {/* <NavLink to="/register" className="btn" activeClassName="active">
-            Register
-          </NavLink> */}
-        </div>
+      <h1>{userName}</h1>
         <hr />
-      <h1>{restaurantName}</h1>
-
+      <div className="btn-group">
+        <NavLink to="/" className="btn" activeClassName="active">
+          Logout
+        </NavLink>
+        <NavLink to={`/homepage/${userName}/userprofile`} className="btn" activeClassName="active">
+          User Profile
+        </NavLink>
+        <NavLink to={`/homepage/${userName}/mymeny`} className="btn" activeClassName="active">
+          My Menu
+        </NavLink>
+        <NavLink to={`/homepage/${userName}/menuform`} className="btn" activeClassName="active">
+          Edit Menu
+        </NavLink>
+        <NavLink to={`/homepage/${userName}/qrcodegenerator`} className="btn" activeClassName="active">
+          QR Code
+        </NavLink>
+      </div>
     </div>
   )
 }
