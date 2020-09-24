@@ -18,7 +18,7 @@ function HomePage () {
         <NavLink to={`/homepage/${userName}/userprofile`} className="btn" activeClassName="active">
           User Profile
         </NavLink>
-        <NavLink to={`/homepage/${userName}/mymeny`} className="btn" activeClassName="active">
+        <NavLink to={`/homepage/${userName}/mymenu`} className="btn" activeClassName="active">
           My Menu
         </NavLink>
         <NavLink to={`/homepage/${userName}/menuform`} className="btn" activeClassName="active">

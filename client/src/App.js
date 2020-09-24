@@ -15,6 +15,7 @@ import Navbar from './components/Navbar';
 import MenuForm from './components/MenuForm';
 import QrCodeGenerator from './components/QrCodeGenerator';
 import UserProfile from './components/UserProfile';
+import MyMenu from './components/MyMenu';
 
 function App() {
   return (
@@ -23,6 +24,9 @@ function App() {
 
         <hr />
         <Switch>
+          <Route path="/homepage/:userName/mymenu" exact>
+            <MyMenu/>
+          </Route>
           <Route path="/homepage/:userName/userprofile" exact>
             <UserProfile/>
           </Route>
