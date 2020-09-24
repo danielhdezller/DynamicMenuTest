@@ -1,21 +1,22 @@
 import React, { useState } from 'react';
-import auth from '../utils/auth';
-import apiService from '../ApiService';
-import {Link} from 'react-router-dom';
-
-
+import auth from '../utils/auth'
+import apiService from './../ApiService';
+import { useHistory } from "react-router-dom";
 
 
   const initialState = {
-    userName: '',
-    restaurantName: '',
+    firstName: '',
+    lastName: '',
     email: '',
     password: '',
+    restaurants: '',
   };
   
-  const Register = (props) => {
+  const Register = () => {
     const [state, setState] = useState(initialState);
   
+    const history = useHistory();
+
     const handleChange = (e) => {
       const { name, value } = e.target;
       setState((prevState) => ({
@@ -27,18 +28,14 @@ import {Link} from 'react-router-dom';
   
     const handleSubmit = async (e) => {
       e.preventDefault();
-        state && apiService.register(state);
-        //FIX
-        //call apiService to send state 
-        // This sets isAuthenticated = true and redirects to profile
-        // props.setIsAuthenticated(true);
-        // auth.login(() => props.history.push('/profile')); //QUESTION
-        
+        state && await apiService.register(state);
+        auth.login(() => history.push(`/homepage/${state.userName}`)); //QUESTION
+
     };
   
     const validateForm = () => {
       return (
-        !state.email || !state.password || !state.userName || !state.restaurantName
+        !state.email || !state.password || !state.firstName || !state.lastName || !state.restaurants 
       );
     };
 
@@ -49,21 +46,21 @@ import {Link} from 'react-router-dom';
       <form className="form" onSubmit={handleSubmit}>
         <input
           type="text"
-          placeholder="User Name"
-          name="userName"
+          placeholder="firstName"
+          name="firstName"
           value={state.userName}
           onChange={handleChange}
         />
         <input
           type="text"
-          placeholder="Restaurant Name"
-          name="restaurantName"
-          value={state.restaurantName}
+          placeholder="lastName"
+          name="lastName"
+          value={state.lastName}
           onChange={handleChange}
         />
         <input
           type="text"
-          placeholder="Email"
+          placeholder="email"
           name="email"
           value={state.email}
           onChange={handleChange}
@@ -75,11 +72,16 @@ import {Link} from 'react-router-dom';
           value={state.password}
           onChange={handleChange}
         />
-        <Link to={`/homepage/${state.userName}`}>
+        <input
+          type="text"
+          placeholder="restaurants"
+          name="restaurants"
+          value={state.restaurants}
+          onChange={handleChange}
+        />
           <button className="form-submit" type="submit" disabled={validateForm()}>
-          &nbsp;Register&nbsp;
+            &nbsp;Register&nbsp;
           </button>
-        </Link>
       </form>
 
     </div>

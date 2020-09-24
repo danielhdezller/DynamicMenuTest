@@ -15,8 +15,8 @@ async function getAll(req, res) {
 
 async function postOne(req, res) {
   try {
-    const { userName, restaurantName, email, password, date } = req.body;
-    const newUser = await userModel.create({ userName, restaurantName, email, password, date });
+    const { firstName, lastName, email, password, date, restaurants } = req.body;
+    const newUser = await userModel.create({ firstName, lastName, email, password, date, restaurants });
     res.status(201);
     res.send(newUser);
   } catch (err) {

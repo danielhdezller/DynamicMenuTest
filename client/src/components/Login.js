@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
-import apiService from '../ApiService';
+// import apiService from '../ApiService';
 
 const initialState = {
   userName: '',
@@ -19,16 +19,16 @@ function Login () {
   };
 
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-      state && apiService.register(state);
-      //FIX
-      //call apiService to send state 
-      // This sets isAuthenticated = true and redirects to profile
-      // props.setIsAuthenticated(true);
-      // auth.login(() => props.history.push('/profile')); //QUESTION
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  //     state && apiService.register(state);
+  //     //FIX
+  //     //call apiService to send state 
+  //     // This sets isAuthenticated = true and redirects to profile
+  //     // props.setIsAuthenticated(true);
+  //     // auth.login(() => props.history.push('/profile')); //QUESTION
       
-  };
+  // };
 
   const validateForm = () => {
     return (
@@ -41,7 +41,7 @@ function Login () {
       <h1>Login</h1>
       <div className="form-container">
 
-        <form>
+        <form className="form">
         <input
           type="text"
           placeholder="User Name"

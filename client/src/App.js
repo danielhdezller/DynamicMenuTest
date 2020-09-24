@@ -1,13 +1,13 @@
 import React from 'react';
-
 import './App.css';
 
 import {
   BrowserRouter as Router,
   Switch,
   Route,
-  NavLink
 } from "react-router-dom";
+
+
 import Login from './components/Login';
 import Register from './components/Register';
 import HomePage from './components/HomePage';
@@ -18,6 +18,8 @@ import UserProfile from './components/UserProfile';
 import MyMenu from './components/MyMenu';
 
 function App() {
+
+
   return (
     <Router>
       <div className="container">
@@ -43,7 +45,7 @@ function App() {
             <Login />
           </Route>
           <Route path="/register">
-            <Register  />
+            <Register />
           </Route>
           <Route path="/" exact>
             <Navbar/>

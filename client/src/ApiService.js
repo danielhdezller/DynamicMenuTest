@@ -14,6 +14,16 @@ apiService.register = (user) => {
   }
   )
 };
+apiService.adMenu = (menu) => {
+  return fetchRequest('/register', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(menu)
+  }
+  )
+};
 
 apiService.login = (user) => {
   return fetchRequest( '/login', {
