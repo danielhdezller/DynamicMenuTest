@@ -6,6 +6,9 @@ import QRCode from 'qrcode.react'
 function QrCodeGenerator () {
 
   const {userName} = useParams();
+  const URLpath = `http://localhost:3000/homepage/${userName}/mymenu`
+  console.log( '----------> URLpath:', URLpath);
+
 
 
   return (
@@ -17,7 +20,7 @@ function QrCodeGenerator () {
         </NavLink>
         </div>
         <div className="qrcode">
-          <QRCode value="http://facebook.github.io/react/" />
+          <QRCode value={URLpath} alt={URLpath}/>
         </div>
     </div>
   )
