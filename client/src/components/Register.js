@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import auth from '../utils/auth';
 import apiService from '../ApiService';
+import {Link} from 'react-router-dom';
+
 
 
 
@@ -73,9 +75,11 @@ import apiService from '../ApiService';
           value={state.password}
           onChange={handleChange}
         />
-        <button className="form-submit" type="submit" disabled={validateForm()}>
-        &nbsp;Register&nbsp;
-        </button>
+        <Link to={`/homepage/${state.userName}`}>
+          <button className="form-submit" type="submit" disabled={validateForm()}>
+          &nbsp;Register&nbsp;
+          </button>
+        </Link>
       </form>
 
     </div>

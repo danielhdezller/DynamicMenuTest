@@ -10,35 +10,28 @@ import {
 } from "react-router-dom";
 import Login from './components/Login';
 import Register from './components/Register';
+import HomePage from './components/HomePage';
+import Navbar from './components/Navbar';
 
-function App({ setIsAuthenticated }) {
+function App() {
   return (
     <Router>
       <div className="container">
-        <div className="btn-group">
-          <NavLink to="/login" className="btn" activeClassName="active">
-            Login
-          </NavLink>
-          <NavLink to="/register" className="btn" activeClassName="active">
-            Register
-          </NavLink>
-        </div>
+
         <hr />
         <Switch>
-          <Route path="/" exact>
-            este es la pagina de inicio
+          <Route path="/homepage/:restaurantName">
+            <HomePage/>
           </Route>
           <Route path="/login">
             <Login />
           </Route>
-
-          <Route
-          path="/register"
-          // FIX
-          render={(props) => (
-            <Register {...props} setIsAuthenticated={setIsAuthenticated} />
-          )}
-        />
+          <Route path="/register">
+            <Register  />
+          </Route>
+          <Route path="/" exact>
+            <Navbar/>
+          </Route>
         </Switch>
       </div>
     </Router>
