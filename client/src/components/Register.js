@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import auth from '../utils/auth'
-import apiService from './../ApiService';
 import { useHistory } from "react-router-dom";
 
+import apiService from './../ApiService';
+import auth from '../utils/auth'
 
   const initialState = {
     firstName: '',
@@ -29,8 +29,7 @@ import { useHistory } from "react-router-dom";
     const handleSubmit = async (e) => {
       e.preventDefault();
         state && await apiService.register(state);
-        auth.login(() => history.push(`/homepage/${state.userName}`)); //QUESTION
-
+        auth.login(() => history.push(`/homepage/${state.email}`)); 
     };
   
     const validateForm = () => {

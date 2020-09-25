@@ -16,13 +16,13 @@ function MenuForm () {
   const [state, setState] = useState(initialState);
   const [inputList, setInputList] = useState([{ dish: "", price: "" }]);
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setState((prevState) => ({
-      ...prevState,
-      [name]: value,
-    }));
-  };
+  // const handleChange = (e) => {
+  //   const { name, value } = e.target;
+  //   setState((prevState) => ({
+  //     ...prevState,
+  //     [name]: value,
+  //   }));
+  // };
   // handle input change
   const handleInputChange = (e, index) => {
     const { name, value } = e.target;
@@ -44,12 +44,13 @@ function MenuForm () {
   
   const handleSubmit = async (e) => {
     e.preventDefault();
-      state && apiService.adMenu(state);
+    inputList && apiService.adMenu(inputList);
   };
   
+  console.log( '----------> inputList.dish:', inputList[0]);
     const validateForm = () => {
       return (
-        !state.restaurantName || !state.dish || !state.price 
+    !inputList[0].dish || !inputList[0].price 
       );
     };
 
@@ -65,30 +66,6 @@ function MenuForm () {
       </header>
 
       <form className="form" onSubmit={handleSubmit}>
-        <input
-          type="text"
-          placeholder="Restaurant Name"
-          name="restaurantName"
-          value={state.restaurantName}
-          onChange={handleChange}
-        />
-        <div className="dish">
-          <input
-            type="text"
-            placeholder="Dish"
-            name="dish"
-            value={state.dish}
-            onChange={handleChange}
-          />
-          <input
-            type="text"
-            placeholder="Price"
-            name="price"
-            value={state.price}
-            onChange={handleChange}
-          />
-        </div>
-
         {inputList.map((state, i) => {
         return (
           <div className="box">
@@ -114,13 +91,9 @@ function MenuForm () {
           </div>
         );
       })}
-        
-
-        <Link to={`/homepage/${state.userName}`}>
           <button className="form-submit" type="submit" disabled={validateForm()}>
           &nbsp;Submit Menu&nbsp;
           </button>
-        </Link>
       </form>
 
     </div>

@@ -14,16 +14,6 @@ apiService.register = (user) => {
   }
   )
 };
-apiService.adMenu = (menu) => {
-  return fetchRequest('/register', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(menu)
-  }
-  )
-};
 
 apiService.login = (user) => {
   return fetchRequest( '/login', {
@@ -33,6 +23,18 @@ apiService.login = (user) => {
     },
     body: JSON.stringify(user)
   })
+};
+
+//TODO
+apiService.adMenu = (menu) => {
+  return fetchRequest('/register', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(menu)
+  }
+  )
 };
 
 apiService.profile = () => {
@@ -54,7 +56,7 @@ function fetchRequest (path, options) {
       return res.status <= 400 ? res : Promise.reject(res)
     })
     .then(res => res.status !== 204 ? res.json() : res)
-    .catch(o_O => console.error(o_O))
+    .catch(error => console.error(error))
 }
 
 export default apiService;
