@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useHistory, NavLink } from 'react-router-dom';
 
 import apiService from '../ApiService';
 import auth from '../utils/auth'
@@ -44,10 +44,15 @@ function Login () {
 
   return (
     <div>
+      <div>
+        <NavLink to={`/`} className="btn" activeClassName="active">
+          Back
+        </NavLink>
+      </div>
       <h1>Login</h1>
       <div className="form-container">
 
-        <form className="form" onSubmit={handleSubmit}>
+        <form className="form" autoComplete="off" onSubmit={handleSubmit}>
         <input
           type="text"
           placeholder="email"

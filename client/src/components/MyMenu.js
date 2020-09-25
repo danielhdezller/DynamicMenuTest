@@ -11,10 +11,25 @@ function MyMenu () {
     apiService.getMenu()
     .then(menus => setEvents(menus)) 
   }, [])
-  let listMenu = [];
+  
+  let listMain,  
+    listStarters,
+    listDessert,
+    listDrinks;
+
   if (menus.length) {
-    listMenu = menus[0].restaurant.map((menu, index) =>
+
+    listMain = menus[0].restaurant.main.map((menu, index) =>
     <li key={index}>{menu.dish} {menu.price}€</li>
+    );
+    listStarters = menus[0].restaurant.starters.map((menu, index) =>
+    <li key={index}>{menu.dish} {menu.price}€</li>
+    );
+    listDessert = menus[0].restaurant.dessert.map((menu, index) =>
+    <li key={index}>{menu.dish} {menu.price}€</li>
+    );
+    listDrinks = menus[0].restaurant.drinks.map((menu, index) =>
+    <li key={index}>{menu.drink} {menu.price}€</li>
     );
   }
 
@@ -27,8 +42,20 @@ function MyMenu () {
         </NavLink>
         </div>
         <div>
+          <h2>Starters</h2>
+          <ul>{listStarters}</ul>
+        </div>
+        <div>
           <h2>Main Dishes</h2>
-          <ul>{listMenu}</ul>
+          <ul>{listMain}</ul>
+        </div>
+        <div>
+          <h2>Dessert</h2>
+          <ul>{listDessert}</ul>
+        </div>
+        <div>
+          <h2>Drinks</h2>
+          <ul>{listDrinks}</ul>
         </div>
     </div>
   )

@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { useParams, NavLink } from 'react-router-dom';
 import apiService from '../ApiService';
 
 function Starters () {
+
+
 
   const [startersList, setStartersList] = useState([{ dish: "", price: "" }]);
   const [mainList, setMainList] = useState([{ dish: "", price: "" }]);
@@ -95,24 +96,37 @@ function Starters () {
       drinks: drinkList,
     }}
 
+
+    function validateForm () {
+      const validateStartersList = startersList.map(function(x) {
+        return !x.dish || !x.price;
+      });
+      const validateMainList = mainList.map(function(x) {
+        return !x.dish || !x.price;
+      });
+      const validateDessertList = dessertList.map(function(x) {
+        return !x.dish || !x.price;
+      });
+      const validateDrinkList = drinkList.map(function(x) {
+        return !x.drink || !x.price;
+      });
+      const arrConcat = validateStartersList.concat(validateMainList, validateDessertList, validateDrinkList);
+      const result = arrConcat.includes(true)
+      return result;
+    }
+    
   const handleSubmit = async (e) => {
     e.preventDefault();
     startersList && apiService.postMenu(postRequest);
   };
-  
-    const validateForm = () => {
-      return (
-    !startersList[0].dish || !startersList[0].price 
-      );
-    };
 
   return (
     <div>
-      <form className="form" onSubmit={handleSubmit} >
+      <form className="form" autoComplete="off" onSubmit={handleSubmit} >
       <h2>Starters</h2>
         {startersList.map((state, i) => {
         return (
-          <div className="box">
+          <div key="{i}" className="box">
             <input
               type="text"
               placeholder="Dish Name"
@@ -138,7 +152,7 @@ function Starters () {
       <h2>Main</h2>
         {mainList.map((state, i) => {
         return (
-          <div className="box">
+          <div key="{i}" className="box">
             <input
               type="text"
               placeholder="Dish Name"
@@ -165,7 +179,7 @@ function Starters () {
       <h2>Dessert</h2>
         {dessertList.map((state, i) => {
         return (
-          <div className="box">
+          <div key="{i}" className="box">
             <input
               type="text"
               placeholder="Dish Name"
@@ -192,7 +206,7 @@ function Starters () {
       <h2>Drinks</h2>
         {drinkList.map((state, i) => {
         return (
-          <div className="box">
+          <div key="{i}" className="box">
             <input
               type="text"
               placeholder="Drink Name"

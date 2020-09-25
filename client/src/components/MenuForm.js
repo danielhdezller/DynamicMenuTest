@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useParams, NavLink } from 'react-router-dom';
-import apiService from '../ApiService';
+
 import Starters from './Starters'
-import Main from './Main'
 
 function MenuForm () {
   const {userName} = useParams();
@@ -10,7 +9,7 @@ function MenuForm () {
   return (
     <div className="container">
       <header>
-        <h1>MenuForm</h1>
+      <h1>{userName}</h1>
         <div className="btn-group">
           <NavLink to={`/homepage/${userName}`} className="btn" activeClassName="active">
             Back

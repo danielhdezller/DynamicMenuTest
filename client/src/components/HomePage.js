@@ -4,8 +4,6 @@ import { useParams, NavLink } from 'react-router-dom';
 function HomePage () {
 
   const {userName} = useParams();
-  console.log( '----------> restaurantName:', userName);
-
 
   return (
     <div>

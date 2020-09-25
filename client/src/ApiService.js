@@ -39,6 +39,7 @@ apiService.postMenu = (menu) => {
 apiService.getMenu = () => {
   return fetchRequest('/getMenu')
 };
+
 apiService.profile = () => {
   return fetchRequest('/me')
 };
