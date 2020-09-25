@@ -15,8 +15,8 @@ async function getAll(req, res) {
 
 async function postOne(req, res) {
   try {
-    const { restaurantName, date } = req.body;
-    const newMenu = await MenuModel.create({ restaurantName, date });
+    const  restaurant = req.body;
+    const newMenu = await MenuModel.create({  restauran: restaurant.starter });
     res.status(201);
     res.send(newMenu);
   } catch (err) {

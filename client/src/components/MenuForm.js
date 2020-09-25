@@ -1,28 +1,15 @@
 import React, { useState } from 'react';
-import { useParams, Link, NavLink } from 'react-router-dom';
+import { useParams, NavLink } from 'react-router-dom';
 import apiService from '../ApiService';
-
-const initialState = {
-  restaurantName: '',
-  dish: '',
-  price: '',
-};
 
 
 function MenuForm () {
 
   const {userName} = useParams();
 
-  const [state, setState] = useState(initialState);
-  const [inputList, setInputList] = useState([{ dish: "", price: "" }]);
+  const [inputList, setInputList] = useState([{restaurant:{ dish: "", price: "" }}]);
 
-  // const handleChange = (e) => {
-  //   const { name, value } = e.target;
-  //   setState((prevState) => ({
-  //     ...prevState,
-  //     [name]: value,
-  //   }));
-  // };
+
   // handle input change
   const handleInputChange = (e, index) => {
     const { name, value } = e.target;
@@ -44,10 +31,9 @@ function MenuForm () {
   
   const handleSubmit = async (e) => {
     e.preventDefault();
-    inputList && apiService.adMenu(inputList);
+    inputList && apiService.postMenu(inputList);
   };
   
-  console.log( '----------> inputList.dish:', inputList[0]);
     const validateForm = () => {
       return (
     !inputList[0].dish || !inputList[0].price 

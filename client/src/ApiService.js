@@ -25,9 +25,8 @@ apiService.login = (user) => {
   })
 };
 
-//TODO
-apiService.adMenu = (menu) => {
-  return fetchRequest('/register', {
+apiService.postMenu = (menu) => {
+  return fetchRequest('/postMenu', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
@@ -37,6 +36,9 @@ apiService.adMenu = (menu) => {
   )
 };
 
+apiService.getMenu = () => {
+  return fetchRequest('/getMenu')
+};
 apiService.profile = () => {
   return fetchRequest('/me')
 };
