@@ -15,8 +15,12 @@ async function getAll(req, res) {
 
 async function postOne(req, res) {
   try {
-    const  restaurant = req.body;
-    const newMenu = await MenuModel.create({  restauran: restaurant.starter });
+    const  { restaurant } = req.body;
+    console.log( '----------> restaurant:', restaurant);
+
+
+    const newMenu = await MenuModel.create({ restaurant });
+    console.log( '----------> newMenu:', newMenu);
     res.status(201);
     res.send(newMenu);
   } catch (err) {
