@@ -4,7 +4,6 @@ import QRCode from 'qrcode.react'
 import ReactToPdf from 'react-to-pdf'
 
 const ref = React.createRef();
-console.log( '----------> ref:', ref);
 
 function QrCodeGenerator () {
 
@@ -13,13 +12,15 @@ function QrCodeGenerator () {
   console.log( '----------> URLpath:', URLpath);
 
   return (
-    <div>
-      <h1>QrCodeGenerator</h1>
-      <div className="btn-group">
-        <NavLink to={`/homepage/${userName}`} className="btn" activeClassName="active">
-          Back
-        </NavLink>
-      </div>
+    <div className="container">
+      <header>
+        <h1>QrCodeGenerator</h1>
+        <div className="btn-group">
+          <NavLink to={`/homepage/${userName}`} className="btn" activeClassName="active">
+            Back
+          </NavLink>
+        </div>
+      </header>
       <div ref={ref} id="QR-Code" className="qrcode">
         <h1>{userName}</h1>
         <QRCode  value={URLpath} alt={URLpath}/>

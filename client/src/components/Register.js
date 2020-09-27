@@ -39,14 +39,17 @@ import auth from '../utils/auth'
     };
 
   return (
-    <div>
-      <h1>Register</h1>
-      <div>
-        <NavLink to={`/`} className="btn" activeClassName="active">
-          Back
-        </NavLink>
-      </div>
+    <div className="container">
+      <header>
+        <div><img src={require('../assets/LOGO.png')} alt="LOGO" className="img-logo"/></div>
+        <div>
+          <NavLink to={`/`} className="btn" activeClassName="active">
+            Back
+          </NavLink>
+        </div>
+      </header>
       <form className="form" autoComplete="off" onSubmit={handleSubmit}>
+        <h1>Register</h1>
         <input
           type="text"
           placeholder="firstName"
@@ -86,7 +89,6 @@ import auth from '../utils/auth'
             &nbsp;Register&nbsp;
           </button>
       </form>
-
     </div>
   );
 };

@@ -34,29 +34,33 @@ function MyMenu () {
   }
 
   return (
-    <div>
+    <div className="container">
+    <header>
       <h1>MyMenu</h1>
       <div className="btn-group">
         <NavLink to={`/homepage/${userName}`} className="btn" activeClassName="active">
           Back
         </NavLink>
-        </div>
-        <div>
-          <h2>Starters</h2>
-          <ul>{listStarters}</ul>
-        </div>
-        <div>
-          <h2>Main Dishes</h2>
-          <ul>{listMain}</ul>
-        </div>
-        <div>
-          <h2>Dessert</h2>
-          <ul>{listDessert}</ul>
-        </div>
-        <div>
-          <h2>Drinks</h2>
-          <ul>{listDrinks}</ul>
-        </div>
+      </div>
+    </header>
+    <div className="menu">
+      <div>
+        <h2>Starters</h2>
+        <ul>{listStarters}</ul>
+      </div>
+      <div>
+        <h2>Main Dishes</h2>
+        <ul>{listMain}</ul>
+      </div>
+      <div>
+        <h2>Dessert</h2>
+        <ul>{listDessert}</ul>
+      </div>
+      <div>
+        <h2>Drinks</h2>
+        <ul>{listDrinks}</ul>
+      </div>
+    </div>
     </div>
   )
 }

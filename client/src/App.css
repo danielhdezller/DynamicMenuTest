@@ -1,10 +1,11 @@
+
 .App {
   text-align: center;
 }
 
 .App-header {
   background-color: #282c34;
-  min-height: 20vh;
+  min-height: 15vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -16,17 +17,56 @@
 .container {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .btn-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem;
+}
+
+.form {  
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.form {  
+.form-submit,
+.confirm-btn {
+  border: 0;
+  background: none;
+  box-shadow: none;
+  margin: 1rem 0;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  background: #e9c46a;
+  color: #fafafa;
+  font-size: 1rem;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20vh;
+  height: auto;
+  margin-right: 1vh;
+  margin-left: 1vh;
+  background: none;
+  box-shadow: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  background: #264653;
+  color: #fafafa;
+  font-size: 2vh;
+  text-decoration: none;
+}
+
+.btn-homepage-group{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -40,9 +80,17 @@
   justify-content: center;
 }
 
-.dish {
+header {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  background: #2a9d8f;
+}
+footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  background: #2a9d8f;
 }

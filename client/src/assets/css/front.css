@@ -1,0 +1,34 @@
+.img-logo {
+  width: 15vh;
+  height: auto;
+}
+
+.front-description {
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  margin-left: 5vh;
+  margin-right: 5vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.lottie {
+  height: 40vh;
+}
+
+.description {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 3vh;
+  margin-left: 3vh;
+  margin-right: 3vh;
+}
+
+
+.logo {
+  margin-left: 3vh;
+}

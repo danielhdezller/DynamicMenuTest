@@ -1,0 +1,17 @@
+.btn-homepage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 60vh;
+  min-height: 20vh;
+  border: 0;
+  background: none;
+  box-shadow: none;
+  margin: 1rem 0;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  background: #e76f51;
+  color: #fafafa;
+  font-size: 8vh;
+  text-decoration: none;
+}

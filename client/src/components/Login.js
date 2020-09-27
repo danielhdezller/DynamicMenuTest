@@ -43,16 +43,17 @@ function Login () {
   };
 
   return (
-    <div>
-      <div>
-        <NavLink to={`/`} className="btn" activeClassName="active">
-          Back
-        </NavLink>
-      </div>
-      <h1>Login</h1>
-      <div className="form-container">
-
-        <form className="form" autoComplete="off" onSubmit={handleSubmit}>
+    <div className="container">
+      <header>
+        <div><img src={require('../assets/LOGO.png')} alt="LOGO" className="img-logo"/></div>
+        <div className="btn-group">
+          <NavLink to={`/`} className="btn" activeClassName="active">
+            Back
+          </NavLink>
+        </div>
+      </header>
+      <form className="form" autoComplete="off" onSubmit={handleSubmit}>
+        <h1>Login</h1>
         <input
           type="text"
           placeholder="email"
@@ -60,18 +61,17 @@ function Login () {
           value={state.email}
           onChange={handleChange}
         />
-          <input
+        <input
           type="password"
           placeholder="supersecretthingy"
           name="password"
           value={state.password}
           onChange={handleChange}
         />
-          <button className="form-submit" type="submit" disabled={validateForm()}>
-          &nbsp;Login&nbsp;
-          </button>
-        </form>
-      </div>
+        <button className="form-submit" type="submit" disabled={validateForm()}>
+        &nbsp;Login&nbsp;
+        </button>
+      </form>
     </div>
   )
 }

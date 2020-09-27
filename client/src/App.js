@@ -11,7 +11,7 @@ import {
 import Login from './components/Login';
 import Register from './components/Register';
 import HomePage from './components/HomePage';
-import Navbar from './components/Navbar';
+import Front from './components/Front';
 import MenuForm from './components/MenuForm';
 import QrCodeGenerator from './components/QrCodeGenerator';
 import UserProfile from './components/UserProfile';
@@ -23,8 +23,6 @@ function App() {
   return (
     <Router>
       <div className="container">
-
-        <hr />
         <Switch>
           <Route path="/homepage/:userName/mymenu" exact>
             <MyMenu/>
@@ -48,7 +46,7 @@ function App() {
             <Register />
           </Route>
           <Route path="/" exact>
-            <Navbar/>
+            <Front/>
           </Route>
         </Switch>
       </div>

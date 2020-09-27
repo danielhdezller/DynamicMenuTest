@@ -23,8 +23,8 @@ app.use(router);
 const database = mongoose.connection;
 database.on('error', console.error.bind(console, 'connection error'));
 database.once('open', function () {
-  console.log('Database connected!!!'); // eslint-disable-line no console
+  console.log('Database connected!!!'); 
   app.listen(port, () => {
-    console.log(`Listening on http://${host}:${port}`) // eslint-disable-line no console
+    console.log(`Listening on http://${host}:${port}`) 
   })
 });
