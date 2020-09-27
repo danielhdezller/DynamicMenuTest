@@ -5,7 +5,7 @@ import apiService from '../ApiService';
 import auth from '../utils/auth'
 
 const initialState = {
-  email: '',
+  restaurantName: '',
   password: '',
 };
 
@@ -24,28 +24,28 @@ function Login () {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const { email, password } = state;
-    const user = { email, password };
+    const { restaurantName, password } = state;
+    const user = { restaurantName, password };
     const res = await apiService.login(user);
       if (res) { //QUESTION res.error 
         alert(`${res.message}`);
         setState(initialState);
       } else {
-        auth.login(() => history.push(`/homepage/${state.email}`));
+        auth.login(() => history.push(`/homepage/${state.restaurantName}`));
 
       }
   };
 
   const validateForm = () => {
     return (
-    !state.password || !state.email
+    !state.password || !state.restaurantName
     );
   };
 
   return (
     <div className="container">
       <header>
-        <div><img src={require('../assets/LOGO.png')} alt="LOGO" className="img-logo"/></div>
+        <div className="logo"><img src={require('../assets/LOGO.png')} alt="LOGO" className="img-logo"/></div>
         <div className="btn-group">
           <NavLink to={`/`} className="btn" activeClassName="active">
             Back
@@ -56,14 +56,14 @@ function Login () {
         <h1>Login</h1>
         <input
           type="text"
-          placeholder="email"
-          name="email"
-          value={state.email}
+          placeholder="Restaurant Name"
+          name="restaurantName"
+          value={state.restaurantName}
           onChange={handleChange}
         />
         <input
           type="password"
-          placeholder="supersecretthingy"
+          placeholder="password"
           name="password"
           value={state.password}
           onChange={handleChange}

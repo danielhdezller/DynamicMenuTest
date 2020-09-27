@@ -56,6 +56,7 @@ import auth from '../utils/auth'
           name="firstName"
           value={state.userName}
           onChange={handleChange}
+          required
         />
         <input
           type="text"

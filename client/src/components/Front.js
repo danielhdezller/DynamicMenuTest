@@ -18,7 +18,7 @@ function Front () {
           <NavLink to="/login" className="btn" activeClassName="active">
             Login
           </NavLink>
-          
+          <br/>
           <NavLink to="/register" className="btn" activeClassName="active">
             Register
           </NavLink>
@@ -28,28 +28,27 @@ function Front () {
         <div className="description">
           <p>
             The Dynamic Menu is designed to adapt your Restaurant Menu at any time in just a few minutes.<br/>
+            <br/>
             It is ideal for restaurants that change their menu depending on the season. <br/>
             Join us and try it for free!<br/>
           </p>
-          <div className="lottie">
-            <Lottie className="lottie" animationData={storeIcon}/>
+          <div className="lottie-front">
+            <Lottie className="lottie-front" animationData={storeIcon}/>
           </div>
         </div>
         <div className="description">
-          <div className="lottie">
-            <Lottie className="lottie" animationData={scanMenu}/>
+          <div className="lottie-front">
+            <Lottie className="lottie-front" animationData={scanMenu}/>
           </div>
           <p>
-          Desde nuestra plataforma podrás generar tu propio codigo QR de forma facil y sencilla"
+          Via our platform you can generate your own QR Code easily and simply!<br/>
+          <br/>
+          Protect your customers with a 100% Digital Menu. <br/>
+          With this app you can avoid the use of physical menus, <br/>
+          which makes it simple for your customers to access your menu from their mobile devices. <br/>
           </p>
         </div>
-        <div className="description">
-          <p>
-          Protege a tus clientes con un Menú 100% digital<br/>
-          Evita el uso de menús físicos con esta herramienta,<br/>
-          que hace que tus clientes accedan a tu menú desde sus dispositivos moviles.
-          </p>
-        </div>
+
       </div>
       <footer>
         <p>Author: Daniel Hernández Llerena</p>

@@ -1,8 +1,11 @@
 body {
   margin: 0;
-  font-family: "Hind","Avenir","Helvetica",arial;
+  font-family: 'Proxima-Nova',proxima-nova,sans-serif;
+  color: #20252b;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #fff;
+  box-sizing: border-box;
 }
 
 code {

@@ -3,10 +3,45 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  font-size: 2vh;
+  margin-left: 1.5vw;
+  margin-right: 1.5vw;
 }
-.dish {
+
+.menu-list-container {
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  max-width: 85vw;
+  min-width: 85vw;
+  background: none;
+  box-shadow: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  background: #eddcd2;
+}
+
+li {
+  margin-right: 10px;
+}
+
+.price {
+  margin-right: 1.5vw;
+}
+
+.menu-list-title{
+  color: #cb997e;
+  font-weight: 800;
+
+}
+.menu-list-ul{
+  color: #161a1d;
+  font-weight: 400;
+}
+
+.listelement{
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  margin-bottom: 1vh;
 }
