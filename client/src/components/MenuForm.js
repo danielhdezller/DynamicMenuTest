@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams, NavLink } from 'react-router-dom';
 
-import Starters from './Starters'
+import DynamicForm from './DynamicForm'
 
 function MenuForm () {
   const {userName} = useParams();
@@ -9,14 +9,16 @@ function MenuForm () {
   return (
     <div className="container">
       <header>
-      <h1>{userName}</h1>
+        <div className="logo">
+          <img src={require('../assets/LOGO.png')} alt="LOGO" className="img-logo"/>
+        </div>
         <div className="btn-group">
           <NavLink to={`/homepage/${userName}`} className="btn" activeClassName="active">
             Back
           </NavLink>
           </div>
       </header>
-          <Starters />
+          <DynamicForm />
 
     </div>
   )

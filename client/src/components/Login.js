@@ -27,7 +27,7 @@ function Login () {
     const { restaurantName, password } = state;
     const user = { restaurantName, password };
     const res = await apiService.login(user);
-      if (res) { //QUESTION res.error 
+      if (res) { 
         alert(`${res.message}`);
         setState(initialState);
       } else {
@@ -54,14 +54,16 @@ function Login () {
       </header>
       <form className="form" autoComplete="off" onSubmit={handleSubmit}>
         <h1>Login</h1>
-        <input
+        <input 
+          className="impt-login"
           type="text"
           placeholder="Restaurant Name"
           name="restaurantName"
           value={state.restaurantName}
           onChange={handleChange}
         />
-        <input
+        <input 
+          className="impt-login"
           type="password"
           placeholder="password"
           name="password"

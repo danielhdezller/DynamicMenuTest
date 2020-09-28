@@ -17,12 +17,6 @@
   width: auto;
   justify-content: center;
 }
-.form {  
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
 
 .form-submit,
 .confirm-btn {
@@ -71,18 +65,6 @@
   
 }
 
-input {
-  border-radius: 1.5rem;
-  border-color: #264653;
-  margin: 20px;
-  height: 50px;
-  padding: 10px 20px;
-  font-weight: 200;
-  box-shadow: 0 0 10px 1px #3333;
-  font-size: large;
-  outline:none;
-}
-
 header {
   display: flex;
   flex-direction: row;
@@ -99,6 +81,9 @@ header {
 .header-title {
   margin-left: 10vw;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 footer {
   display: flex;
@@ -109,4 +94,18 @@ footer {
   font-size: 1.5vh;
   border-radius: 1.5rem;
   margin: 1vh;
+}
+
+.impt-login {
+  border-radius: 1rem;
+  border-color: #3333;
+  width: 270px;
+  height: 25px;
+  margin: 1vw;
+  height: 3vh;
+  padding: 0.5vw;
+  font-size: 2vh;
+  text-align: center;
+  outline:none;
+  box-shadow: 0 0 10px 1px #3333;
 }

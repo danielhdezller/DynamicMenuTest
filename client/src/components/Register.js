@@ -51,21 +51,24 @@ import auth from '../utils/auth'
       <form className="form" autoComplete="off" onSubmit={handleSubmit}>
         <h1>Register</h1>
         <input
+          className="impt-login"
           type="text"
-          placeholder="firstName"
+          placeholder="First Name"
           name="firstName"
           value={state.userName}
           onChange={handleChange}
           required
         />
         <input
+          className="impt-login"
           type="text"
-          placeholder="lastName"
+          placeholder="Last Name"
           name="lastName"
           value={state.lastName}
           onChange={handleChange}
         />
         <input
+          className="impt-login"
           type="text"
           placeholder="email"
           name="email"
@@ -73,15 +76,17 @@ import auth from '../utils/auth'
           onChange={handleChange}
         />
         <input
+          className="impt-login"
           type="password"
-          placeholder="supersecretthingy"
+          placeholder="password"
           name="password"
           value={state.password}
           onChange={handleChange}
         />
         <input
+          className="impt-login"
           type="text"
-          placeholder="restaurants"
+          placeholder="Restaurant Name"
           name="restaurants"
           value={state.restaurants}
           onChange={handleChange}
