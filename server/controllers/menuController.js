@@ -4,7 +4,7 @@ const MenuModel = require ('../models/Menu');
 
 async function getAll(req, res) {
   try {
-    const menu = await MenuModel.find();
+    const menu = await MenuModel.find().sort({_id:-1});
     res.status(200);
     res.send(menu);
   } catch (err) {

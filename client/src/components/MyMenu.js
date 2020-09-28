@@ -12,7 +12,6 @@ function MyMenu () {
   useEffect( () =>{
     apiService.getMenu()
     .then(menus => setEvents(menus)) 
-    console.log( '----------> menus:', menus);
   }, [])
   
   let listMain,  
