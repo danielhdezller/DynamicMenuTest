@@ -41,6 +41,9 @@ const login = async (req, res) => {
   }
 }
 
+
+
+
 async function getUser (req, res) {
   try {
     const user = await User.find();

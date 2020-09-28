@@ -5,7 +5,7 @@ import apiService from '../ApiService';
 import auth from '../utils/auth'
 
 const initialState = {
-  restaurantName: '',
+  email: '',
   password: '',
 };
 
@@ -24,21 +24,21 @@ function Login () {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const { restaurantName, password } = state;
-    const user = { restaurantName, password };
+    const { email, password } = state;
+    const user = { email, password };
     const res = await apiService.login(user);
       if (res) { 
         alert(`${res.message}`);
         setState(initialState);
       } else {
-        auth.login(() => history.push(`/homepage/${state.restaurantName}`));
+        auth.login(() => history.push(`/homepage/${state.email}`));
 
       }
   };
 
   const validateForm = () => {
     return (
-    !state.password || !state.restaurantName
+    !state.password || !state.email
     );
   };
 
@@ -57,9 +57,9 @@ function Login () {
         <input 
           className="impt-login"
           type="text"
-          placeholder="Restaurant Name"
-          name="restaurantName"
-          value={state.restaurantName}
+          placeholder="email"
+          name="email"
+          value={state.email}
           onChange={handleChange}
         />
         <input 

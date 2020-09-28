@@ -1,11 +1,13 @@
 import React, { useState, useRef } from 'react';
 import apiService from '../ApiService';
 import '../assets/css/menuForm.css';
+import { useParams } from 'react-router-dom';
 
 const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop) 
-
 function DynamicForm () {
-
+  
+  const {email} = useParams();
+  
   const [startersList, setStartersList] = useState([{ dish: "", price: "" }]);
   const [mainList, setMainList] = useState([{ dish: "", price: "" }]);
   const [dessertList, setDessertList] = useState([{ dish: "", price: "" }]);
@@ -91,6 +93,7 @@ function DynamicForm () {
 
   
   const postRequest = {
+    email: email,
     restaurant: {
       starters: startersList,
       main: mainList,

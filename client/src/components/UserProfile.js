@@ -3,13 +3,13 @@ import { useParams, NavLink } from 'react-router-dom';
 
 function UserProfile () {
 
-  const {userName} = useParams();
+  const {email} = useParams();
 
   return (
     <div>
       <h1>UserProfile</h1>
       <div className="btn-group">
-        <NavLink to={`/homepage/${userName}`} className="btn" activeClassName="active">
+        <NavLink to={`/homepage/${email}`} className="btn" activeClassName="active">
           Back
         </NavLink>
         </div>

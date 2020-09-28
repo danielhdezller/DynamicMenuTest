@@ -4,7 +4,7 @@ import { useParams, NavLink } from 'react-router-dom';
 import DynamicForm from './DynamicForm'
 
 function MenuForm () {
-  const {userName} = useParams();
+  const {email} = useParams();
 
   return (
     <div className="container">
@@ -13,7 +13,7 @@ function MenuForm () {
           <img src={require('../assets/LOGO.png')} alt="LOGO" className="img-logo"/>
         </div>
         <div className="btn-group">
-          <NavLink to={`/homepage/${userName}`} className="btn" activeClassName="active">
+          <NavLink to={`/homepage/${email}`} className="btn" activeClassName="active">
             Back
           </NavLink>
           </div>

@@ -7,13 +7,14 @@ import '../assets/css/menu.css'
 function MyMenu () {
 
   const [menus, setEvents] = useState([]);
-  const {userName} = useParams();
+  const {email} = useParams();
   
   useEffect( () =>{
     apiService.getMenu()
     .then(menus => setEvents(menus)) 
   }, [])
   
+  console.log( '----------> menus:', menus);
   let listMain,  
     listStarters,
     listDessert,
@@ -52,7 +53,7 @@ function MyMenu () {
       <header>
         <h1 className="header-title">MyMenu</h1>
         <div className="btn-group">
-          <NavLink to={`/homepage/${userName}`} className="btn" activeClassName="active">
+          <NavLink to={`/homepage/${email}`} className="btn" activeClassName="active">
             Back
           </NavLink>
         </div>

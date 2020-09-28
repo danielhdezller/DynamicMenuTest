@@ -3,7 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import '../assets/css/homePage.css'
 function HomePage () {
 
-  const {userName} = useParams();
+  const {email} = useParams();
 
   return (
     <div className="container">
@@ -17,20 +17,20 @@ function HomePage () {
             Logout
           </Link>
           <br/>
-          <Link to={`/homepage/${userName}/userprofile`} className="btn" activeClassName="active">
+          <Link to={`/homepage/${email}/userprofile`} className="btn" activeClassName="active">
             User Profile
           </Link>
         </div>
       </header>
 
       <div className="btn-homepage-group">
-        <Link to={`/homepage/${userName}/mymenu`} className="btn-homepage" activeClassName="active">
+        <Link to={`/homepage/${email}/mymenu`} className="btn-homepage" activeClassName="active">
           My Menu
         </Link>
-        <Link to={`/homepage/${userName}/menuform`} className="btn-homepage" activeClassName="active">
+        <Link to={`/homepage/${email}/menuform`} className="btn-homepage" activeClassName="active">
           Edit Menu
         </Link>
-        <Link to={`/homepage/${userName}/qrcodegenerator`} className="btn-homepage" activeClassName="active">
+        <Link to={`/homepage/${email}/qrcodegenerator`} className="btn-homepage" activeClassName="active">
           QR Code
         </Link>
       </div>

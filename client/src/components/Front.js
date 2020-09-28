@@ -1,7 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import Lottie from "lottie-react";
-import restaurantAnimation from "../assets/lottie/restaurantAnimation.json"
 import scanMenu from "../assets/lottie/scan-menu.json"
 import storeIcon from "../assets/lottie/store-icon.json"
 import '../assets/css/front.css'

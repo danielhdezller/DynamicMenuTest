@@ -1,10 +1,10 @@
 'use strict';
 
-const MenuModel = require ('../models/Menu');
+const UserModel = require ('../models/User');
 
 async function getAll(req, res) {
   try {
-    const menu = await MenuModel.find().sort({_id:-1});
+    const menu = await UserModel.find().sort({_id:-1});
     res.status(200);
     res.send(menu);
   } catch (err) {
@@ -15,8 +15,8 @@ async function getAll(req, res) {
 
 async function postOne(req, res) {
   try {
-    const  { restaurant } = req.body;
-    const newMenu = await MenuModel.create({ restaurant });
+    const  { restaurant, email  } = req.body;
+    const newMenu = await UserModel.updateOne( {email: email}, { restaurant: restaurant });
     res.status(201);
     res.send(newMenu);
   } catch (err) {

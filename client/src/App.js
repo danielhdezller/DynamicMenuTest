@@ -7,7 +7,6 @@ import {
   Route,
 } from "react-router-dom";
 
-
 import Login from './components/Login';
 import Register from './components/Register';
 import HomePage from './components/HomePage';
@@ -24,19 +23,19 @@ function App() {
     <Router>
       <div className="container">
         <Switch>
-          <Route path="/homepage/:userName/mymenu" exact>
+          <Route path="/homepage/:email/mymenu" exact>
             <MyMenu/>
           </Route>
-          <Route path="/homepage/:userName/userprofile" exact>
+          <Route path="/homepage/:email/userprofile" exact>
             <UserProfile/>
           </Route>
-          <Route path="/homepage/:userName/menuform" exact>
+          <Route path="/homepage/:email/menuform" exact>
             <MenuForm/>
           </Route>
-          <Route path="/homepage/:userName/qrcodegenerator" exact>
+          <Route path="/homepage/:email/qrcodegenerator" exact>
             <QrCodeGenerator/>
           </Route>
-          <Route path="/homepage/:userName">
+          <Route path="/homepage/:email">
             <HomePage/>
           </Route>
           <Route path="/login">
