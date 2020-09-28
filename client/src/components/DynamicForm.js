@@ -94,7 +94,7 @@ function DynamicForm () {
   
   const postRequest = {
     email: email,
-    restaurant: {
+    restaurantMenu: {
       starters: startersList,
       main: mainList,
       dessert: dessertList,

@@ -9,7 +9,8 @@ const UserSchema = new Schema({
   lastName: { type: String, required: true },
   email: { type: String, required: true, unique: true },
   password: { type: String, required: true },
-  restaurant: {
+  restaurantName: { type: String, required: true },
+  restaurantMenu: {
     starters: { type: Array, required: true },
     main: { type: Array, required: true },
     dessert: { type: Array, required: true },

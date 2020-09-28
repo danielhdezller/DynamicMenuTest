@@ -15,8 +15,8 @@ async function getAll(req, res) {
 
 async function postOne(req, res) {
   try {
-    const  { restaurant, email  } = req.body;
-    const newMenu = await UserModel.updateOne( {email: email}, { restaurant: restaurant });
+    const  { restaurantMenu, email  } = req.body;
+    const newMenu = await UserModel.updateOne( {email: email}, { restaurantMenu: restaurantMenu });
     res.status(201);
     res.send(newMenu);
   } catch (err) {

@@ -15,23 +15,29 @@ function QrCodeGenerator () {
   return (
     <div className="container">
       <header>
-        <h1 className="header-title">QrCodeGenerator</h1>
+      <div >
+          <img src={require('../assets/LOGO.png')} alt="LOGO" className="img-logo"/>
+        </div>
         <div className="btn-group">
           <NavLink to={`/homepage/${email}`} className="btn" activeClassName="active">
             Back
           </NavLink>
         </div>
       </header>
-      <div ref={ref} id="QR-Code" className="qrcode">
-        <h1>{email}</h1>
-        <QRCode  value={URLpath} alt={URLpath}/>
-      </div>
-      <div className="qrcode">
+      <div className="qr-code-content">
+      <br/>
+      <h1 className="header-title">QrCodeGenerator</h1>
+      <br/>
         <ReactToPdf targetRef={ref} filename={email}>
-        {({toPdf}) => (
-            <button onClick={toPdf}>Generate pdf</button>
-        )}
-        </ReactToPdf>
+          {({toPdf}) => (
+              <div className="btn-to-pdf" onClick={toPdf}>Generate pdf</div>
+          )}
+          </ReactToPdf>
+        <br/>
+          <div ref={ref} id="QR-Code" className="qrcode">
+              <h3>This is your QR code</h3>
+            <QRCode  value={URLpath} alt={URLpath}/>
+          </div>
       </div>
     </div>
   )

@@ -20,6 +20,7 @@
 
 .form-submit,
 .confirm-btn {
+  cursor: pointer;
   border: 0;
   background: none;
   box-shadow: none;
@@ -29,6 +30,7 @@
   background: #264653;
   color: #fafafa;
   font-size: 1rem;
+  text-decoration: none;
 }
 
 .btn {
@@ -78,9 +80,6 @@ header {
   box-shadow: 0 0 10px 1px #3333;
 }
 
-.header-title {
-  margin-left: 10vw;
-}
 html {
   scroll-behavior: smooth;
 }

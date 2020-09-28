@@ -9,7 +9,7 @@ import auth from '../utils/auth'
     lastName: '',
     email: '',
     password: '',
-    restaurants: '',
+    restaurantName: '',
   };
   
   const Register = () => {
@@ -34,7 +34,7 @@ import auth from '../utils/auth'
   
     const validateForm = () => {
       return (
-        !state.email || !state.password || !state.firstName || !state.lastName || !state.restaurants 
+        !state.email || !state.password || !state.firstName || !state.lastName || !state.restaurantName 
       );
     };
 
@@ -87,8 +87,8 @@ import auth from '../utils/auth'
           className="impt-login"
           type="text"
           placeholder="Restaurant Name"
-          name="restaurants"
-          value={state.restaurants}
+          name="restaurantName"
+          value={state.restaurantName}
           onChange={handleChange}
         />
           <button className="form-submit" type="submit" disabled={validateForm()}>

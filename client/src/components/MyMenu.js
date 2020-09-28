@@ -6,44 +6,46 @@ import '../assets/css/menu.css'
 
 function MyMenu () {
 
-  const [menus, setEvents] = useState([]);
+  const [menus, setMenu] = useState([]);
   const {email} = useParams();
   
   useEffect( () =>{
     apiService.getMenu()
-    .then(menus => setEvents(menus)) 
+    .then(menus => setMenu(menus)) 
   }, [])
   
   console.log( '----------> menus:', menus);
   let listMain,  
     listStarters,
     listDessert,
-    listDrinks;
+    listDrinks,
+    restName;
 
-  if (menus.length) {
-
-    listMain = menus[0].restaurant.main.map((menu, index) =>
+    if (menus.length) {
+      
+    restName = menus[0].restaurantName;
+    listMain = menus[0].restaurantMenu.main.map((menu, index) =>
     <div key={menu.dish} className="listelement"> 
       <li> {menu.dish} </li>
-      <div className="price"> {menu.price}€ </div>
+      <div className="price"> {menu.price} € </div>
     </div> 
     );
-    listStarters = menus[0].restaurant.starters.map((menu, index) =>
+    listStarters = menus[0].restaurantMenu.starters.map((menu, index) =>
     <div key={menu.dish} className="listelement"> 
       <li> {menu.dish} </li>
-      <div className="price"> {menu.price}€ </div>
+      <div className="price"> {menu.price} € </div>
     </div> 
     );
-    listDessert = menus[0].restaurant.dessert.map((menu, index) =>
+    listDessert = menus[0].restaurantMenu.dessert.map((menu, index) =>
     <div key={menu.dish} className="listelement"> 
       <li> {menu.dish} </li>
-      <div className="price"> {menu.price}€ </div>
+      <div className="price"> {menu.price} € </div>
     </div> 
     );
-    listDrinks = menus[0].restaurant.drinks.map((menu, index) =>
+    listDrinks = menus[0].restaurantMenu.drinks.map((menu, index) =>
     <div  key={menu.drink} className="listelement"> 
       <li > {menu.drink} </li>
-      <div className="price"> {menu.price}€ </div>
+      <div className="price"> {menu.price} € </div>
     </div>  
     );
   }
@@ -51,7 +53,9 @@ function MyMenu () {
   return (
     <div className="container">
       <header>
-        <h1 className="header-title">MyMenu</h1>
+        <div >
+          <img src={require('../assets/LOGO.png')} alt="LOGO" className="img-logo"/>
+        </div>
         <div className="btn-group">
           <NavLink to={`/homepage/${email}`} className="btn" activeClassName="active">
             Back
@@ -60,6 +64,7 @@ function MyMenu () {
       </header>
       <div className="content">
       <div className="menu">
+        <h1 className="header-title">{restName}</h1>
         <div className="menu-list-container">
           <h2 className="menu-list-title">Starters</h2>
           <ul className="menu-list-ul">{listStarters}</ul>

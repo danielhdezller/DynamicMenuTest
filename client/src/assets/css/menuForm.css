@@ -5,7 +5,6 @@
   justify-content: center;
 }
 
-
 .box {
   display: flex;
   width: 95vw;
@@ -59,6 +58,7 @@
 }
 
 .btn-remove {
+  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -77,6 +77,7 @@
 }
 
 .btn-add {
+  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -94,5 +95,4 @@
   font-size: auto;
   text-decoration: none;
   scroll-behavior: smooth;
-
 }

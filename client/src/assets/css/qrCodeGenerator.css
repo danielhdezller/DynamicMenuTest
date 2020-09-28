@@ -3,4 +3,34 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 500px;
+  height: 500px; 
+}
+
+.qr-code-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-to-pdf {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-color: #3333;
+  box-shadow: 0 0 10px 1px #3333;
+  width: 200px;
+  height: 10vh;
+  background: none;
+  box-shadow: none;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  background: #2a9d8f;
+  color: #fafafa;
+  font-size: 3vh;
+  text-align: center;
+  text-decoration: none;
+  scroll-behavior: smooth;
 }
