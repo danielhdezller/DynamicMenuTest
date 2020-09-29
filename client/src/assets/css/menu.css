@@ -23,9 +23,15 @@
 li {
   margin-right: 10px;
 }
+.menu-product{
+  margin-right: 10px;
+  width: 80vw;
+}
 
 .price {
-  margin-right: 1.5vw;
+  /* margin-right: 1.5vw; */
+  width: 20vw;
+  text-align: center;
 }
 
 .menu-list-title{
@@ -36,6 +42,7 @@ li {
 .menu-list-ul{
   color: #161a1d;
   font-weight: 500;
+  padding: 1vw;
 }
 
 .listelement{

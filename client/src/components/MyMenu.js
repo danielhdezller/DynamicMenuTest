@@ -14,7 +14,7 @@ function MyMenu () {
     .then(menus => setMenu(menus)) 
   }, [])
   
-  console.log( '----------> menus:', menus);
+
   let listMain,  
     listStarters,
     listDessert,
@@ -26,25 +26,25 @@ function MyMenu () {
     restName = menus[0].restaurantName;
     listMain = menus[0].restaurantMenu.main.map((menu, index) =>
     <div key={menu.dish} className="listelement"> 
-      <li> {menu.dish} </li>
+      <div className="menu-product"> {menu.dish} </div>
       <div className="price"> {menu.price} € </div>
     </div> 
     );
     listStarters = menus[0].restaurantMenu.starters.map((menu, index) =>
     <div key={menu.dish} className="listelement"> 
-      <li> {menu.dish} </li>
+      <div className="menu-product"> {menu.dish} </div>
       <div className="price"> {menu.price} € </div>
     </div> 
     );
     listDessert = menus[0].restaurantMenu.dessert.map((menu, index) =>
     <div key={menu.dish} className="listelement"> 
-      <li> {menu.dish} </li>
+      <div className="menu-product"> {menu.dish} </div>
       <div className="price"> {menu.price} € </div>
     </div> 
     );
     listDrinks = menus[0].restaurantMenu.drinks.map((menu, index) =>
     <div  key={menu.drink} className="listelement"> 
-      <li > {menu.drink} </li>
+      <div className="menu-product" > {menu.drink} </div>
       <div className="price"> {menu.price} € </div>
     </div>  
     );
