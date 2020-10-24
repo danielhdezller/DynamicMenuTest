@@ -8,12 +8,11 @@
 
 The possible users of this web app are the owners or managers of restaurants.
 
-**This MVP should allow them to:**
+## Screenshots
 
-- Generate a new Menu per each restaruant.
-- Add or remove a single dish.
-- Generate thery own QR Code.
-- Generate a PDF with the QR code. 
+<p align="center">
+  <img src="/client/src/assets/ScreenShots DM.png" />
+</p>
 
 ## Getting started
 1. Run npm i from /server folder
