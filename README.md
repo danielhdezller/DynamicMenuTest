@@ -4,9 +4,16 @@
   <img src="/client/src/assets/LOGO.png" />
 </p>
 
-**Dynamic Menu** web app pretend to be an easy way to create and modify restaurants menu.
+The **Dynamic Menu** is designed to adapt your Restaurant Menu **at any time** in just a few minutes.
 
-The possible users of this web app are the owners or managers of restaurants.
+It is ideal for restaurants that change their menu depending on the season.
+Join us and try it for free!
+
+Via our platform you can **generate your own QR Code** easily and simply!
+
+Protect your customers with a **100% Digital Menu**.
+With this app you can avoid the use of physical menus,
+which makes it simple for your customers to access your menu from their **mobile devices**.
 
 ## Screenshots
 
