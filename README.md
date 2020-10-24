@@ -1,5 +1,9 @@
 # DynamicMenu
 
+<p align="center">
+  <img src="/client/src/assets/LOGO.png" />
+</p>
+
 **Dynamic Menu** web app pretend to be an easy way to create and modify restaurants menu.
 
 The possible users of this web app are the owners or managers of restaurants.
