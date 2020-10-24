@@ -19,10 +19,40 @@ The possible users of this web app are the owners or managers of restaurants.
 1. Run npm i from /server folder
 2. Run npm i from /client folder
 
-## Main thing to fix 
-- Actually, the MyMenu component is not getting the menu related to the User, it just take the last menu updated of the last user registered.
+## Installation
 
-## Things todo 
-- Authentications
+1. Clone this repo and enter!
 
-Daniel H.
+   ```bash
+   git clone https://github.com/llere-alt/DynamicMenu.git
+   cd DynamicMenu/
+   ```
+
+2. Install dependencies.
+
+   ```bash
+   cd client && npm i
+   cd ../server && npm i
+   ```
+3. Start the app.
+
+- on the server folder
+   ```bash
+   nodemon index.js
+   ```
+ - on the client folder
+    ```bash
+    npm start
+   ```
+
+
+## Tech Stack
+* [React](https://reactjs.org/)
+* [Express](https://expressjs.com/)
+* [Mongoose](https://mongoosejs.com/)
+* Other dependencies:
+  * [react-to-pdf](https://www.npmjs.com/package/react-to-pdf)
+  * [qrcode.react](https://www.npmjs.com/package/qrcode.react)
+
+## Developed by:
+* Daniel Hernández Llerena - [GitHub](https://github.com/llere-alt) - [LinkedIn](https://www.linkedin.com/in/daniel-hernandez-ller/)
