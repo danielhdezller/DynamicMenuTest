@@ -1,3 +1,4 @@
+
 [![GitHub license](https://img.shields.io/github/license/danielhdezller/DynamicMenu)](https://github.com/danielhdezller/DynamicMenu/blob/master/LICENSE)
 [![GitHub issues](https://img.shields.io/github/issues/danielhdezller/DynamicMenu)](https://GitHub.com/danielhdezller/DynamicMenu/issues)
 
