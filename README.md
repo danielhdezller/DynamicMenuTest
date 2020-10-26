@@ -1,3 +1,5 @@
+[![GitHub license](https://img.shields.io/github/license/danielhdezller/DynamicMenu)](https://github.com/danielhdezller/DynamicMenu/blob/main/LICENSE)
+[![GitHub issues](https://img.shields.io/github/issues/danielhdezller/DynamicMenu)](https://GitHub.com/danielhdezller/DynamicMenu/issues)
 # DynamicMenu
 
 <p align="center">
@@ -60,3 +62,8 @@ which makes it simple for your customers to access your menu from their **mobile
 ## Developed by:
 
 - Daniel Hernández Llerena - [GitHub](https://github.com/danielhdezller) - [LinkedIn](https://www.linkedin.com/in/daniel-hernandez-ller/)
+
+## License
+
+MIT © [Daniel Hernández](https://github.com/danielhdezller)
+
