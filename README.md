@@ -60,7 +60,7 @@ which makes it simple for your customers to access your menu from their **mobile
   - [react-to-pdf](https://www.npmjs.com/package/react-to-pdf)
   - [qrcode.react](https://www.npmjs.com/package/qrcode.react)
   
-[![forthebadge](https://forthebadge.com/images/badges/powered-by-coffee.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/powered-by-coffee.svg)](https://www.linkedin.com/in/daniel-hernandez-ller/)
 
 ## Developed by:
 
