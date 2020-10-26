@@ -59,4 +59,4 @@ which makes it simple for your customers to access your menu from their **mobile
 
 ## Developed by:
 
-- Daniel Hernández Llerena - [GitHub](https://github.com/llere-alt) - [LinkedIn](https://www.linkedin.com/in/daniel-hernandez-ller/)
+- Daniel Hernández Llerena - [GitHub](https://github.com/danielhdezller) - [LinkedIn](https://www.linkedin.com/in/daniel-hernandez-ller/)
